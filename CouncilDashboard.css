@@ -1,0 +1,363 @@
+/* Layout */
+.dashboard-layout {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left .nav-logo {
+  height: 90px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #2b6cb0;
+}
+
+.nav-link.active {
+  color: #2b6cb0;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f56565;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #e53e3e;
+}
+
+/* Content Area */
+/* .content {
+  padding: 2rem;
+  background-image: url(${process.env.PUBLIC_URL + '/pic.jpg'});
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: calc(100vh - 72px);
+  position: relative;
+} */
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255 255 255 / 19%);
+  z-index: 1;
+}
+
+.main-header, .program-cards {
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-header h1 {
+  color: #cb3434;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.create-program-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-program-btn:hover {
+  background-color: #38a169;
+}
+
+/* Program Cards */
+.program-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.program-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+}
+
+.program-card-header {
+  padding: 1.25rem;
+  background-color: #2b6cb0;
+  color: white;
+}
+
+.program-card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.program-card-body {
+  padding: 1.25rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+}
+
+.program-card-footer {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background-color: #f7fafc;
+}
+
+.program-card-footer button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.program-card-footer button:first-child {
+  background-color: #4299e1;
+  color: white;
+}
+
+.program-card-footer button:first-child:hover {
+  background-color: #3182ce;
+}
+
+.program-card-footer button:last-child {
+  background-color: #f56565;
+  color: white;
+}
+
+.program-card-footer button:last-child:hover {
+  background-color: #e53e3e;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.modal-form {
+  padding: 1.25rem;
+}
+
+.modal-form > div {
+  margin-bottom: 1rem;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.modal-footer button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.cancel-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.submit-btn {
+  background-color: #48bb78;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #38a169;
+}
+.program-card.conducted {
+  border: 2px solid #48bb78;
+}
+
+.program-card-header {
+  position: relative;
+}
+
+.conducted-icon {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  color: white;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.program-card-footer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.program-card-footer button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  background-color: #df1616;
+  color: white;
+}
+
+.conducted-btn {
+  background-color: #48bb78;
+  color: white;
+}
+
+.conducted-btn:hover {
+  background-color: #38a169;
+}
+
+.conducted-btn.conducted {
+  background-color: #276749;
+}
+.program-card-footer button:last-child {
+  background-color: #910f0f;
+  color: white;
+}
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .program-card-footer {
+    flex-direction: column;
+  }
+  
+  .program-card-footer button {
+    width: 100%;
+  }
+}
