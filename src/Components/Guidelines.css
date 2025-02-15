@@ -1,0 +1,85 @@
+/* General Styles */
+.dashboard-guide {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-logo {
+    height: 40px;
+  }
+  
+  .logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #801f27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff6b81;
+  }
+
+/* Guidelines Container */
+.guidelines-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 150px;
+}
+
+.guidelines-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #701414;
+    text-align: center;
+}
+
+.guidelines-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.guidelines-section {
+    margin-bottom: 30px;
+}
+
+.guidelines-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #753232;
+    text-align: left;
+}
+
+.guidelines-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.guidelines-section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}

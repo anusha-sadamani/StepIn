@@ -1,0 +1,334 @@
+/* Root Variables */
+:root {
+  --primary-color: #860832;
+  --secondary-color: #8b0000;
+  --text-color: #333;
+  --background-color: #f4f4f9;
+}
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.student-profile-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.student-profile-navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.student-profile-nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.student-profile-nav-logo {
+  height: 90px;
+  width: auto;
+}
+
+.student-profile-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.student-profile-nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.student-profile-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #8b0000;
+  transition: width 0.3s ease;
+}
+
+.student-profile-nav-link:hover::after {
+  width: 100%;
+}
+
+.student-profile-nav-link.active {
+  color: #8b0000;
+}
+
+.student-profile-nav-link.active::after {
+  width: 100%;
+}
+
+.student-profile-logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #921324;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.student-profile-logout-btn:hover {
+  background-color: #7d1020;
+  transform: translateY(-2px);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+  /* Reduced top margin from 1rem to 0.5rem */
+  margin: 0.5rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 17px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Profile Details */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.profile-details,
+.programs-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 13px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit Form */
+.edit-form .input-group {
+  margin-bottom: 1rem;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+}
+
+.btn-edit {
+  background-color: var(--primary-color);
+  color: rgb(14, 9, 9);
+}
+
+.btn-edit:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+.btn-save {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: darken(#28a745, 10%);
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+  margin-right: 1rem;
+}
+
+.btn-cancel:hover {
+  background-color: darken(#6c757d, 10%);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Programs Section */
+.programs-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.program-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.program-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.program-status .status-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.no-programs {
+  text-align: center;
+  color: #666;
+}
+
+/* Error Message */
+.error-message {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  background-color: #f8d7da;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-profile-nav-right {
+    display: none; /* Consider implementing a mobile menu */
+  }
+}
+/* Existing CSS rules for StudentDashboard... */
+
+/* --- New CSS for the Skills Section --- */
+.student-dashboard__skills {
+  padding: 2rem;
+  background-color: #fff;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-dashboard__skills-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.student-dashboard__skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.student-dashboard__skill {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.student-dashboard__no-skills {
+  font-size: 1rem;
+  color: #666;
+}
+

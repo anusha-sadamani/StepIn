@@ -1,0 +1,146 @@
+/* Navbar container */
+.stepin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stepin-navbar--scrolled {
+  padding: 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stepin-navbar__content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.stepin-navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stepin-navbar__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.stepin-navbar__logo {
+  height: 90px;
+  width: auto;
+}
+
+/* Desktop Navigation */
+.stepin-navbar__desktop-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stepin-navbar__nav-link {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  position: relative;
+}
+
+.stepin-navbar__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #921324;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.stepin-navbar__nav-link:hover::after {
+  width: 100%;
+}
+
+.stepin-navbar__nav-link:hover {
+  color: #921324;
+}
+
+.stepin-navbar__nav-link--active {
+  color: #921324;
+  background-color: rgba(146, 19, 36, 0.1);
+}
+
+.stepin-navbar__logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a5568;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.stepin-navbar__logout-btn:hover {
+  color: #921324;
+}
+
+/* Mobile Menu */
+.stepin-navbar__mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.stepin-navbar__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stepin-navbar__mobile-menu--open {
+  display: block;
+}
+
+.stepin-navbar__mobile-menu-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.stepin-navbar__mobile-menu-item:hover {
+  background-color: #f7fafc;
+  color: #921324;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .stepin-navbar__desktop-nav {
+    display: none;
+  }
+
+  .stepin-navbar__mobile-menu-btn {
+    display: block;
+  }
+}

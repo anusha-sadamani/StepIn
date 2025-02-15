@@ -1,0 +1,180 @@
+/* CouncilProfile.css */
+
+/* Scoped CSS for CouncilProfile component */
+.council-profile-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+}
+
+/* Navbar */
+.council-profile-navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background-color: white;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.council-profile-nav-left .council-profile-nav-logo {
+height: 90px;
+}
+
+.council-profile-nav-right {
+display: flex;
+gap: 1.5rem;
+align-items: center;
+}
+
+.council-profile-nav-link {
+display: flex;
+align-items: center;
+color: #4a5568;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s;
+}
+
+.council-profile-nav-link:hover {
+color: #2b6cb0;
+}
+
+.council-profile-nav-link.active {
+color: #2b6cb0;
+}
+
+.council-profile-logout-btn {
+display: flex;
+align-items: center;
+padding: 0.5rem 1rem;
+background-color: #f56565;
+color: white;
+border: none;
+border-radius: 0.375rem;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+.council-profile-logout-btn:hover {
+background-color: #e53e3e;
+}
+
+.council-profile-student-profile {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+.council-profile-student-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.council-profile-search-input {
+width: 95%;
+padding: 0.75rem 1rem 0.75rem 2.5rem;
+border: 1px solid #e5e7eb;
+border-radius: 0.5rem;
+outline: none;
+transition: all 0.2s;
+}
+
+
+.council-profile-profile-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2%;
+}
+
+.council-profile-profile-title {
+  margin-bottom: 2rem;
+  color: #2d3748;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.council-profile-error-message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fed7d7;
+  color: #c53030;
+  border-radius: 0.375rem;
+}
+
+.council-profile-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.council-profile-input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.council-profile-input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.council-profile-profile-info p {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.council-profile-profile-info strong {
+  color: #2d3748;
+  margin-right: 0.5rem;
+}
+
+.council-profile-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.council-profile-btn-edit {
+  background-color: #4299e1;
+  color: white;
+}
+
+.council-profile-btn-edit:hover {
+  background-color: #3182ce;
+}
+
+.council-profile-btn-save {
+  background-color: #48bb78;
+  color: white;
+}
+
+.council-profile-btn-save:hover {
+  background-color: #38a169;
+}
+
+.council-profile-edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

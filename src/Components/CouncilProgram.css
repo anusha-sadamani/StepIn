@@ -1,0 +1,263 @@
+/* Scoped CSS for CouncilProgram component */
+.council-program {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.council-program .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.council-program .nav-left .nav-logo {
+  height: 90px;
+}
+
+.council-program .nav-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.council-program .nav-link {
+  display: flex;
+  align-items: center;
+  color: #851b2c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.council-program .nav-link:hover {
+  color: #94131e;
+}
+
+.council-program .nav-link.active {
+  color: #94131e;
+}
+
+.council-program .logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #94131e;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.council-program .logout-btn:hover {
+  background-color: #94131e;
+}
+
+/* Hero Section */
+.council-program .hero-section {
+  position: relative;
+  height: 16rem;
+  background: linear-gradient(to right, #c3cbdd, #c5d2f7);
+}
+
+.council-program .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.council-program .hero-content {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.council-program .hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  padding: 5rem;
+  padding-bottom: 5%;
+}
+
+/* Main Content */
+.council-program .main-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Search Section */
+.council-program .search-section {
+  margin-bottom: 2rem;
+}
+
+.council-program .search-container {
+  position: relative;
+  max-width: 28rem;
+}
+
+.council-program .search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+.council-program .search-input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.council-program .search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Programs Grid */
+.council-program .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .council-program .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .council-program .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Program Card */
+.council-program .program-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.council-program .program-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.council-program .program-card-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid #f2f4f8;
+}
+
+.council-program .program-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:  #7d1020;
+  margin: 0;
+}
+
+.council-program .program-card-content {
+  padding: 1.25rem;
+}
+
+.council-program .program-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.council-program .program-description {
+  margin-bottom: 1rem;
+}
+
+.council-program .program-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.council-program .field-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.council-program .field-value {
+  color: #111827;
+  margin: 0;
+}
+
+.council-program .details-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #a11414;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.council-program .details-button:hover {
+  background-color: #a11414;
+}
+
+.council-program .no-programs {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.council-program .no-programs p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Error Container */
+.council-program .error-container {
+  padding: 1rem;
+}
+
+.council-program .error-message {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  color: #991b1b;
+}
+
+.council-program .error-message h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.council-program .error-message p {
+  margin: 0;
+  font-size: 0.875rem;
+}

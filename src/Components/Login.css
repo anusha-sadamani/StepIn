@@ -1,0 +1,213 @@
+/* Scoped CSS for Login Component */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-container form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 350px;
+  backdrop-filter: blur(10px);
+}
+
+.login-container .logo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-container .logo {
+  display: block;
+  margin: 0 auto 20px;
+  height: 110px;
+}
+
+.login-container .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.login-container .input-wrapper {
+  position: relative;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-left: orem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.login-container .input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+/* Captcha styles */
+.login-container .captcha-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.login-container .captcha-container {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f9fafb;
+}
+
+.login-container .captcha-checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.login-container .captcha-checkbox {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.login-container .captcha-checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.login-container .captcha-checkbox:checked + .captcha-checkbox-custom {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.login-container .captcha-checkbox:checked + .captcha-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.login-container .captcha-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.login-container .captcha-logo {
+  display: flex;
+  align-items: center;
+}
+
+.login-container .recaptcha-logo {
+  height: 28px;
+  width: auto;
+}
+
+.login-container .login-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-container .login-button:hover {
+  background-color: #1d4ed8;
+}
+
+.login-container .login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.login-container .error-message {
+  background-color: #fef2f2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.login-container .links-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login-container .forgot-password-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.login-container .forgot-password-link:hover {
+  color:#6b7280;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .login-container form {
+    padding: 1.5rem;
+  }
+
+  .login-container .captcha-text {
+    font-size: 0.875rem;
+  }
+
+  .login-container .recaptcha-logo {
+    height: 24px;
+  }
+}
